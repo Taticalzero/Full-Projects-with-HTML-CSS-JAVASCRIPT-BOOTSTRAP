@@ -1,0 +1,10 @@
+.rotate {
+    width: 500px;
+    height: 500px;
+    margin: 500px;
+    background-color: blue;
+}
+.rotate:hover {
+    transform: rotate(600grad);
+    transition: 2s ease;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Alterando a posição</title>
+        <meta charset="utf-8" />
+        <script>
+         
+            rotate = 0; 
+             
+            document.addEventListener("DOMContentLoaded", function(){ 
+             
+                document.getElementById("next").addEventListener("click", function(){ 
+                 
+                    if(rotate== 360){rotate = 0} 
+                 
+                    rotate = rotate + 30; 
+                     
+                    document.getElementById("img").style.transform = "rotate("+rotate+"deg)"; 
+                });
+		function mouseDentro(id)   {	document.getElementById(id).src = "img.jpg"   }
+		function mouseFora(id)   {	document.getElementById(id).src = "img.jpg"   }
+                  
+            });
+             
+        </script>
+    </head>
+    <body>
+        <img src="img.jpg" class="" id="img" alt="Teste" />
+        <br />
+        <button id="next">avançar</button>
+	<img src="img.jpg" id="img" onmouseover="mouseDentro('img')" onmouseout="mouseFora('img')" ></img>
+    </body>
+</html>

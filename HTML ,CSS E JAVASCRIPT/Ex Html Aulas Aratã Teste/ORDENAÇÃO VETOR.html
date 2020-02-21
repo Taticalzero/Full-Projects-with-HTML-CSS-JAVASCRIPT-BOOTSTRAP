@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title> AULA DE JAVA SCRIPT </title>
+</head>
+<body>
+<button onclick="sort()">Try it</button>
+
+<p id= "demo"></p>
+<script>
+var fruits = ["BANANA","ORANGE","APPLE","MANGO"];
+document.getElementById("demo").innerHTML = fruits;
+
+
+function sort(){
+fruits.sort();
+fruits.reverse();
+document.getElementById("demo").innerHTML =fruits;
+}
+
+</script>
+</body>
+</html>

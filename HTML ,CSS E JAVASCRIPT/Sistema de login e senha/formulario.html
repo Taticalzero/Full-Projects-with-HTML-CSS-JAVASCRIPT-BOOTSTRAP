@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="pt-br">
+<head>
+	<title>Meu Formulário</title>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="10">
+	<script src="acesso.js"></script>
+	<style>
+		body{
+		background-color:#363636;
+		font-size:16px;
+		font-family:Arial;
+		color:antiquewhite;
+		}
+		h1{
+		font-size=:32px;
+		text-align:center;
+		padding:20px;
+		}
+		h2{
+		font-size=25;
+		color:darksalmon;
+		}
+		</style>
+</head>
+		<body>
+			<h1>Formulário de acesso </h1>
+			<h2>Preencha corretamente com seus dados</h2>
+			<legend>Acesso Restrito !</legend>
+		<form name ="form">
+		Nome: <input type="text" name="nome" autocomplete="off"><br><br>
+		Senha : <input type="password" name="senha" autocomplete="off"><br><br>
+		
+		<input type="button" name="botão" value="LOGIN" onClick="acesso(this.form)">
+		<input type="reset" name="apagar" value="APAGAR">
+		</form>
+		</fieldset></body></html>	

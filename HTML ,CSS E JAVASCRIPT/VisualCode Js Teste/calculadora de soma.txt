@@ -1,0 +1,122 @@
+<DCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,innitial-scale=1.0">
+    <meta http-equip="X-UA-Compatible" content="ie-edge">
+    <title> Aprendendo Js </title>
+    <style>
+    body{
+        font-family:Arial,sans-serif;
+    }
+    div#Calculadora{
+        width:300px;
+    }
+    div#keyboard{
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-gap:10px;
+    }
+    div#keyboard button{
+        padding:10px;
+        font-size:24px;
+    }
+    div#display{
+        padding:5px;
+        font-size:30px;
+        text-align:right;
+        background:#BBD
+    }
+    </style>
+ </head>
+ <body>
+ <h1> TESTE PARA PAGINA </h1>
+ <p> testando caixas de texto </p>
+
+<div id = "Calculadora">
+    <div id="display">
+    </div>
+    <div id="keyboard">
+        <button>AC</button> <button>C</button> <button>%</button> <button>/</button>
+        <button>7</button> <button>8</button> <button>9</button> <button>x</button>
+        <button>4</button> <button>5</button> <button>6</button> <button>-</button>
+        <button>1</button> <button>2</button> <button>3</button> <button>+</button>
+        <button>+/-</button> <button>0</button> <button>.</button> <button>=</button>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+ <script>
+    window.alert('Bem Vindo a minha pagina no servidor');
+    window.confirm('');
+    window.addEventEListener('load',()=>{
+        app=new Vue({
+            el:'#Calculadora',
+            data:{
+                y:"0",
+                x:"0",
+                resetx:false,
+                operation:"",
+            },
+            methods:{
+                keyboard(e){
+                    if(e.target.tagName=='BUTTON'){
+                        app.input(e.target.innerHTML);
+                    }
+                },
+                input(i){
+                    if("0"<=i && i<="9"){
+                        if(app.resetx){
+                            app.x="0";
+                            app.resetx=false;
+                        }
+                        if(app.x.length<12){
+                            if(app.x=="0"){
+                                app.x=i;
+                            }else{
+                                app.x+=i;
+                            }
+                        }
+                    }
+                    if(i=='+/-'){
+                        if(app.x.indexOf('-')==0){
+                            app.x=app.x.substr(1,12);
+                        }else{
+                            app.x='-'+app.x;
+                        }
+                    }
+                }if(i=='.'){
+                    if(app.x.indexOf('.')=='-1'){
+                        app.x=".";
+                    }
+                }
+                if(i=='C'){
+                    app.x="0";
+                }
+                if(i=='+'){
+                    app.y=parseFloat(app.x);
+                    app.resetx=true;
+                    app.operation=i;
+                }
+                if(i=='='){
+                    execute();
+                }
+            
+            },
+            execute(){
+                if(app.operation=="+"){
+                    app.y+=parseFloat(app.x);
+                }
+                    app.x=""+app.y;
+                    app.resetx=true;
+                    app.operation"";
+
+                },
+                
+            }
+        }
+
+    });
+});
+</script>
+</body>
+</html>

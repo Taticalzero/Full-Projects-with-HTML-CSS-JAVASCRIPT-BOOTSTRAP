@@ -1,0 +1,27 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+<title> AULA JAVASCRIPT </title>
+
+<script type= "text/javascript">
+
+var i;
+var j;
+var x;
+
+i=1
+j=4
+x=j*i
+
+document.write(x);
+
+</script>
+
+
+</body>
+
+</html>

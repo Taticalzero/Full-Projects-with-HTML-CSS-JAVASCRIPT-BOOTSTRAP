@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> VETORES EM JAVASCRIPT </title>
+	<meta charset="utf-8">
+	<p id="demo"></p>
+	<body>
+	<h2> VETOR <h2>
+<script>
+var fruits , text , fLen , i ;
+fruits = ["Banana","Laranja","Maçã","Manga"];
+fruits[6]= "Limão";
+fLen = fruits.lenght;
+text= "";
+ for (i=0;i<fLen;i++){
+ text += fruits[i] + "<br>";
+ }
+ document.getElementById("demo").innerHTML=text;
+ </script>
+ </body>
+ </html>
